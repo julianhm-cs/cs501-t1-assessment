@@ -1,5 +1,7 @@
 import os
 import sys
+import site;
+print(site.getsitepackages())
 
 if os.environ.get('FLASK_COVERAGE'):
     import coverage
@@ -16,7 +18,7 @@ if os.environ.get('FLASK_COVERAGE'):
 
 import click
 from flask import Flask
-from flask_bcrypt import Bcrypt
+from flask_bcrypt import Bcrypt 
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -37,6 +39,12 @@ migrate = Migrate(app, db)
 @app.route("/")
 def root_site():
     return "<p>It works!</p>"
+    
+@app.route("/users/index/")
+def userList():
+    query = User.query.all()
+    return str([str(x.email) for x in query])
+    
 
 from project.server.auth.views import auth_blueprint
 app.register_blueprint(auth_blueprint)
