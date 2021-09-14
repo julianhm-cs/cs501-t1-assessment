@@ -16,6 +16,7 @@ manage==0.1.15
 MarkupSafe==2.0.1
 pycparser==2.20
 PyJWT==2.1.0
+python-gnupg==0.4.7
 PyYAML==5.4.1
 six==1.16.0
 SQLAlchemy==1.4.23
