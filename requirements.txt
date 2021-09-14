@@ -7,6 +7,7 @@ Flask==2.0.1
 Flask-Bcrypt==0.7.1
 Flask-Migrate==3.1.0
 Flask-SQLAlchemy==2.5.1
+gnupg==2.3.1
 greenlet==1.1.1
 gunicorn==20.1.0
 itsdangerous==2.0.1
@@ -14,6 +15,7 @@ Jinja2==3.0.1
 Mako==1.1.5
 manage==0.1.15
 MarkupSafe==2.0.1
+psutil==5.8.0
 pycparser==2.20
 PyJWT==2.1.0
 python-gnupg==0.4.7
