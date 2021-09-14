@@ -1,2 +1,2 @@
-web: gunicorn 'project.server:__init__' --log-file=-
+web: gunicorn project.server:app --log-file=-
 heroku ps:scale web=1
